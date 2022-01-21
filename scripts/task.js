@@ -40,7 +40,7 @@ task.hook("get-config", () => {
       css: {
         preprocessorOptions: {
           scss: {
-            additionalData: `@use "${resolve(__dirname, 'packages')}/container/src/element-variables.scss" as *;`,
+            additionalData: `@use "${resolve('packages')}/container/src/element-variables.scss" as *;`,
           },
         },
       },
