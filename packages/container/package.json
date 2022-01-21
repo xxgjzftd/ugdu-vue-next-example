@@ -1,0 +1,12 @@
+{
+  "name": "@xx/container",
+  "version": "1.0.0",
+  "private": true,
+  "author": "xxgjzftd <xxgjzftd@gmail.com>",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "dependencies": {
+    "vue": "^3.2.27",
+    "vue-router": "4"
+  }
+}

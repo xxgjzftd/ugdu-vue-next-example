@@ -1,0 +1,10 @@
+{
+  "name": "@xx/purchase",
+  "version": "1.0.0",
+  "private": true,
+  "author": "xxgjzftd <xxgjzftd@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^3.2.27"
+  }
+}
