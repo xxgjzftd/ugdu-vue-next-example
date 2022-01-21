@@ -1,10 +1,11 @@
 {
   "name": "ugdu-vue-next",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "node scripts/task.js serve",
+    "local": "node scripts/task.js local",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "xxgjzftd <xxgjzftd@gmail.com>",
@@ -14,6 +15,8 @@
     "@ugdu/processor": "^0.1.0",
     "@vitejs/plugin-vue": "^2.0.1",
     "typescript": "^4.5.5",
+    "unplugin-auto-import": "^0.5.11",
+    "unplugin-vue-components": "^0.17.14",
     "vite": "^2.7.13"
   },
   "dependencies": {

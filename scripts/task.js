@@ -1,11 +1,15 @@
 import { argv } from 'process'
-import { resolve } from 'path'
 
 import { Processor } from '@ugdu/processor'
 import { serve, build } from '@ugdu/packer'
 import vue from '@vitejs/plugin-vue'
+import Components from 'unplugin-vue-components/vite'
+import {
+  ElementPlusResolver
+} from 'unplugin-vue-components/resolvers'
+import AutoImport from 'unplugin-auto-import/vite'
 
-const task = new Processor().task(build)
+const task = new Processor().task(argv[2] === 'build' ? build : serve)
 
 task.hook(
   'get-config',
@@ -35,7 +39,12 @@ task.hook(
         }
       },
       meta: 'local',
-      vite: {plugins: [vue()]}
+      vite: {plugins: [vue(), Components({
+        resolvers: [
+          ElementPlusResolver()
+        ]
+      }),
+      AutoImport({imports: ['vue']})]}
     }
   }
 )
