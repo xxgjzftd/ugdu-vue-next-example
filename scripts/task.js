@@ -7,7 +7,7 @@ import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import AutoImport from "unplugin-auto-import/vite";
 
-const task = new Processor().task(argv[2] === 'build' || argv[2] === 'local' ? build : serve);
+const task = new Processor().task(build);
 
 task.hook("get-config", () => {
   return {
@@ -39,7 +39,7 @@ task.hook("get-config", () => {
       css: {
         preprocessorOptions: {
           scss: {
-            additionalData: `@use "@container/element-variables.scss" as *;`,
+            additionalData: `@use "/home/xxgjzftd/practices/ugdu-vue-next/packages/container/src/element-variables.scss" as *;`,
           },
         },
       },
