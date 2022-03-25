@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
-import routes from 'routes/container'
+import routes from 'routes'
 
 // @ts-ignore
 import App from '@container/app.vue'

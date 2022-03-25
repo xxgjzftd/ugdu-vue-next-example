@@ -8,7 +8,8 @@ import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import AutoImport from "unplugin-auto-import/vite";
 import { resolve } from "path";
 
-const task = new Processor().task(build);
+const arg = argv[2] || 'local'
+const task = new Processor().task(['local', 'qa', 'prod'].includes(arg) ? build : serve)
 
 task.hook("get-config", () => {
   return {
@@ -18,23 +19,9 @@ task.hook("get-config", () => {
         name: "@xx/container",
         packages(lps) {
           return lps.map((lp) => lp.name);
-        },
-      },
+        }
+      }
     ],
-    routes: {
-      container: {
-        patterns: "packages/*/src/pages/**/*.vue",
-        base: "/",
-        depth: 1,
-        extends: [
-          {
-            id: "packages/layout/src/pages/layout.vue",
-            path: "/",
-            depth: 0,
-          },
-        ],
-      },
-    },
     meta: "local",
     vite: {
       css: {
