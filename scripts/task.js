@@ -24,6 +24,7 @@ task.hook("get-config", () => {
     ],
     meta: "local",
     vite: {
+      base: '/xx',
       css: {
         preprocessorOptions: {
           scss: {

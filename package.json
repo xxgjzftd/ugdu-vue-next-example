@@ -11,8 +11,8 @@
   "author": "xxgjzftd <xxgjzftd@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@ugdu/packer": "^0.1.14",
-    "@ugdu/processor": "^0.1.3",
+    "@ugdu/packer": "^1.0.0",
+    "@ugdu/processor": "^1.0.0",
     "@vitejs/plugin-vue": "^2.2.4",
     "sass": "^1.49.0",
     "typescript": "^4.5.5",
